@@ -1,9 +1,11 @@
+const width, height, colorInput; 
+
 // Select size input
-const width = $("#inputWidth");
-const height = $("#inputHeight");
+width = $("#inputWidth");
+height = $("#inputHeight");
 
 // Select color input
-const colorInput = $("#colorPicker");
+colorInput = $("#colorPicker");
 
 // When size is submitted by the user, call makeGrid()
 // Your code goes here!
@@ -24,11 +26,12 @@ $(document).ready(function(){
 });
 
 function makeGrid(){
-	let tgrid = $("#pixelCanvas");
+	let tgrid, row, col;
+	tgrid = $("#pixelCanvas");
 	tgrid.empty();
 
-	let row = height.val();
-	let col = width.val();
+	row = height.val();
+	col = width.val();
 
 	for (let r = 0; r < row; r++){
 		tgrid.append("<tr></tr>");
